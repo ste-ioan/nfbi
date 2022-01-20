@@ -1,6 +1,6 @@
 The present collection of files are the scripts employed for the publication "neural fatigue by passive induction".
 
-They require SPM12 and TDT toolboxes for fMRI and MVPA.
+They require SPM12, TDT and SwE toolboxes for fMRI and MVPA.
 
 The scripts "coreg_seg_norm" and "smoothing" are the ones employed for preprocessing.
 
@@ -15,6 +15,8 @@ brain_flippin homogenizes the side of stimulation across participants.
 LOCA_betas_prepost_in_ROIs extracts the values in the smoothed brains in pre and post sessions, computes their delta and correlates with behavior.
 
 while the scripts beginning with "mvpa" run the multivariate analysis.
+
+the "clusterwise_bootstrap_satxsesh" script runs a bootstrapped repeated measures univariate analysis on the flipped brains.
 
 finally, the read_mri_csv script joins all the behavioral csv files in a single table.
 

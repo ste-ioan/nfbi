@@ -1,0 +1,11 @@
+% List of open inputs
+global subject
+nrun = 1; % enter the number of runs here
+jobfile = {'C:\Users\sadek\OneDrive\Documenti\MATLAB\spm_scripts\coreg_seg_norm_job.m'};
+jobs = repmat(jobfile, 1, nrun);
+inputs = cell(0, nrun);
+for subject = 22
+    spm('defaults', 'FMRI');
+    spm_jobman('run', jobs, inputs{:});
+end
+

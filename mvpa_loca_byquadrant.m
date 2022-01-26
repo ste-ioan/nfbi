@@ -1,10 +1,7 @@
 function mvpa_loca_byquadrant(subject, quadrant)
 % since this is the same across sessions
 
-mask  = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\cleaned_',quadrant,'_prepost.nii'];
-
-%;
-% ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\',quadrant,'_prepost.nii'];
+mask  = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\',quadrant,'_prepost.nii'];
 
 %% baseline
 clear cfg
@@ -15,7 +12,7 @@ cfg = decoding_defaults;
 cfg.results.overwrite = 1;
 
 % in this case wholebrain should already correspond to the mask?
-cfg.analysis = 'ROI';%'ROI'
+cfg.analysis = 'ROI';%'ROI' or 'searchlight' in the latter case add radius parameter
 
 % Set the label names to the regressor names which you want to use for
 % decoding, e.g. 'button left' and 'button right'
@@ -66,7 +63,7 @@ clear cfg results
  beta_loc = ['E:\TDT_MRI\',num2str(subject),'\outputs\LOCA_beta_mvpa\conclusion'];
 
 % Set the output directory where data will be saved, e.g. 'c:\exp\results\buttonpress'
-cfg.results.dir = ['E:\TDT_MRI\',num2str(subject),'\outputs\MVPA\loca_clean\conclusion\', quadrant];
+cfg.results.dir = ['E:\TDT_MRI\',num2str(subject),'\outputs\MVPA\loca\conclusion\', quadrant];
 
 cfg.files.mask = mask;
 

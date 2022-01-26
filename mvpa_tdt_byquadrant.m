@@ -21,9 +21,7 @@ beta_loc = ['E:\TDT_MRI\',num2str(subject),'\outputs\TDT\baseline'];
 % Set the output directory where data will be saved, e.g. 'c:\exp\results\buttonpress'
 cfg.results.dir = ['E:\TDT_MRI\',num2str(subject),'\outputs\MVPA\tdt\baseline\', quadrant];
 
-cfg.files.mask = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\cleaned_',quadrant,'_prepost.nii'];
-%cfg.files.mask = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\',quadrant,'_prepost.nii'];
-
+cfg.files.mask = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\',quadrant,'_prepost.nii'];
 
 % Set additional parameters
 % cfg.searchlight.spherical = 1;
@@ -58,8 +56,7 @@ cfg.results.overwrite = 1;
 
 % in this case wholebrain should already correspond to the mask?
 cfg.analysis = 'ROI';
-cfg.files.mask = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\cleaned_',quadrant,'_prepost.nii'];
-%cfg.files.mask = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\',quadrant,'_prepost.nii'];
+cfg.files.mask = ['E:\TDT_MRI\',num2str(subject),'\outputs\ROI\combined\images\',quadrant,'_prepost.nii'];
 
 % Set the label names to the regressor names which you want to use for 
 % decoding, e.g. 'button left' and 'button right'

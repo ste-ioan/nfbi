@@ -5,7 +5,7 @@ data  <- readRDS("~/jamovi analyses/mriTDT/complete_dataset_MRItdt.rds")
 # for some reason block is read as numerical, convert it to category
 data$block<-as.factor(data$block)
 
-modello <- gamlj::gamljGlmMixed(formula = ACCtar ~ 1 + Quadrante + sessione + block + Quadrante:sessione+( 1 + Quadrante + sessione + Quadrante:sessione| subnumber ),
+modello <- gamlj::gamljGlmMixed(formula = ACCtar ~ 1 + Quadrante + sessione  + Quadrante:sessione+( 1 + Quadrante + sessione + Quadrante:sessione| subnumber ),
                                 data = data,
                                 contrasts = list(
                                     list(
@@ -13,10 +13,7 @@ modello <- gamlj::gamljGlmMixed(formula = ACCtar ~ 1 + Quadrante + sessione + bl
                                         type="simple"),
                                     list(
                                         var="sessione",
-                                        type="simple"),
-                                    list(
-                                        var="block",
-                                        type="repeated")),
+                                        type="simple")),
                                 plotHAxis = sessione,
                                 plotSepLines = Quadrante,
                                 plotError = "ci")

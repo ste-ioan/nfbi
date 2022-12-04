@@ -1,5 +1,5 @@
 The present collection of files are the scripts employed for the publication "neural fatigue by passive induction".
-the data files can be found at: https://zenodo.org/record/5883424
+the data files can be found at: https://zenodo.org/record/7395703
 
 These analyses require SPM12, TDT and SwE toolboxes for fMRI and MVPA.
 
